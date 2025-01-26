@@ -31,10 +31,65 @@
         }
         a:focus{
             color:red;
+        }
+         .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+      
+      .flip-card-back {
+        background-color: #0fe6df;
+        color: white;
+        transform: rotateY(180deg);
+      }
     </style>
 </head>
 <body>
-    
+
+          <h1>Card Flip</h1>
+      <h3>Hover over the image below:</h3>
+      
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://images.ctfassets.net/23aumh6u8s0i/2QjNmyDo6LfK4HC8F1q4qw/b8baddde46d79ec9432a15f14b4a41a2/javascript" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>JavaScript</h1> 
+            <p>Programming Language</p> 
+            <p>We love it</p>
+          </div>
+        </div>
+      </div>
 
 <h1 style="display:flex; align-items: center; justify-content: center;">Welcome To Js Learning</h1>
 <details style="background-color: #e1e1e1; font-size: x-large;" >
